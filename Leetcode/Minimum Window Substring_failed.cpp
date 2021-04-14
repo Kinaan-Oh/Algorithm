@@ -1,4 +1,4 @@
-// 마지막 테스트케이스 시간 
+// 마지막 테스트케이스 시간 초과
 
 typedef pair<int,int>   Window;
 Window Impossible(-100000,100000);
