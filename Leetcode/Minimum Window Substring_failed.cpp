@@ -22,8 +22,6 @@ public:
         
         while(window!=End)
         {
-            cout<<window.first<<","<<window.second<<" "<<numOfNeed<<endl;//
-            
             if(numOfNeed==0)
             {
                 updateAns();
