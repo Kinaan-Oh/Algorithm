@@ -1,3 +1,5 @@
+// O(N). Sliding Window.
+
 struct Window
 {
     int begin, end; //  range: [begin,end)
