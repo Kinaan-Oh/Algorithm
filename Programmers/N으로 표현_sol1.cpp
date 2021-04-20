@@ -1,3 +1,5 @@
+// set을 사용한 방법. 공간 복잡도가 매우 크다는 단점.
+
 #include <string>
 #include <vector>
 #include <set>
