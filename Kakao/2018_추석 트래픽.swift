@@ -1,3 +1,5 @@
+// O(nlgn)
+
 import Foundation
 
 func solution(_ lines:[String]) -> Int 
