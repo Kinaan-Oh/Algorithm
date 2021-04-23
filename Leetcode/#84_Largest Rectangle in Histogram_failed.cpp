@@ -1,4 +1,4 @@
-// Bruteforce: O(heights.length * max(heights)). [Time Limit Exceeded(Testcase 90)]
+// Bruteforce: O(heights.length*lg(heights.length) + heights.length*max(heights)) [Time Limit Exceeded(Testcase 90)]
 
 class Solution {
 public:
