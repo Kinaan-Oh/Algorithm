@@ -1,5 +1,5 @@
 // Time Complexity: O(heights.length).
-//자료구조 Stack 사용. ( Vector로 관리할 수 있지만, Stack은 높이 크기순으로 정렬된 상태를 유지하므로 스택 내 모든 원소와 비교할 필요가 없는 반면 Vector는 전부 비교해야하므로 Stack이 좀더 효율적임. )
+//자료구조 Stack 사용. (Vector로 관리할 수 있지만, Stack은 높이 크기순으로 정렬된 상태를 유지하므로 스택 내 모든 원소와 비교할 필요가 없는 반면, Vector는 전부 비교해야하므로 O((heights.length)^2)이 됨.)
 class Solution {
 public:
     int largestRectangleArea(vector<int>& heights) {
