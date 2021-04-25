@@ -30,7 +30,7 @@ func burstBlocks(gameBoard: inout [[String]], blocksToBurst: [[Bool]]) {
     }
 }
 
-O(m^2*n)
+//O(m^2*n)
 func dropBlocks(gameBoard: inout [[String]])
 {
     for col in 0..<gameBoard[0].count {
