@@ -21,6 +21,7 @@ File parse(int id, string file)
     int indexOfLastDigit = file.find_last_of("0123456789");
     file_parsed.id = id;
     file_parsed.head = file.substr(0,indexOfFirstDigit);
+    transform(file_parsed.head.begin(),file_parsed.head.end(),file_parsed.head.begin(),::tolower);
     file_parsed.number = stoi(file.substr(indexOfFirstDigit,indexOfLastDigit-indexOfFirstDigit+1));
     
     return file_parsed;
@@ -28,8 +29,6 @@ File parse(int id, string file)
 
 bool compare(File f1, File f2)
 {
-    transform(f1.head.begin(),f1.head.end(),f1.head.begin(),::tolower);
-    transform(f2.head.begin(),f2.head.end(),f2.head.begin(),::tolower);
     if(f1.head==f2.head) {
         if(f1.number==f2.number) {
             return f1.id<f2.id;
@@ -48,5 +47,6 @@ vector<string> solution(vector<string> files) {
     }
     sort(files_parsed.begin(),files_parsed.end(),compare);
     for(int i=0;i<files_parsed.size();i++)   answer.push_back(files[files_parsed[i].id]);
+    
     return answer;
 }
