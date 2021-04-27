@@ -1,4 +1,4 @@
-// Connected Component(DFS)
+// Connected Component(DFS). O(n^2): 인접행렬 computers의 각 행을 한번씩만 O(n)으로 순회.
 
 #include <string>
 #include <vector>
@@ -30,6 +30,7 @@ int solution(int n, vector<vector<int>> computers) {
     {
         if(!visited[i])
         {
+            visited[i]=true;
             dfs(computers,i);
             numOfConnectedComponent++;
         }
