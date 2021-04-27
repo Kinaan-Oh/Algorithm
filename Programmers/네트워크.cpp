@@ -1,4 +1,4 @@
-// Connected Component
+// Connected Component(DFS)
 
 #include <string>
 #include <vector>
