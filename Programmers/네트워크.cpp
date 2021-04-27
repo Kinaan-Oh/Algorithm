@@ -1,3 +1,5 @@
+// Connected Component
+
 #include <string>
 #include <vector>
 #include <algorithm>
