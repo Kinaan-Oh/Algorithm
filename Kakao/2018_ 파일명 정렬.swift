@@ -1,4 +1,4 @@
-// enumerated()를 이용한 stable sort 구현.
+// enumerated()를 이용한 stable sort 구현. O(nlgn)
 
 import Foundation
 
