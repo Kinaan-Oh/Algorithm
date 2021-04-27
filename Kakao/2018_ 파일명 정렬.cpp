@@ -1,4 +1,4 @@
-// O(nlgn)
+// stable_sort 기능을 사용할 수 있지만, 순서정보를 활용하여 안정 정렬을 구현. O(nlgn).
 
 #include <string>
 #include <vector>
