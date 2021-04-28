@@ -1,4 +1,4 @@
-// 자동완성_failed.cpp의 접두사 비교 반복을 O(N)에서 O(1)로 개선(접두사 기준 양옆만 검사해주면 됨.).
+// 자동완성_failed.cpp의 접두사 비교 반복을 O(N)에서 O(1)로 개선(접두사 기준 양옆만 검사해주면 됨.). Time Complexity: ?(구하지는 못하였음.) << O(L^2)
 
 #include <string>
 #include <vector>
