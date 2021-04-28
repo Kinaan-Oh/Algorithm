@@ -1,4 +1,4 @@
-// TIme Complexity: O(NlgN+L)
+// 정렬(NlgN)을 이용하여 018_ 자동완성_failed.cpp의 반복비교(O(N))을 양옆 비교(O(1))로 개선. TIme Complexity: O(NlgN+L)
 
 #include <string>
 #include <vector>
