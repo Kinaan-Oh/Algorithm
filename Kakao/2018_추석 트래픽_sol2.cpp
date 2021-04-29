@@ -1,4 +1,4 @@
-// O(NlgN): 정렬 부분이 병목. 2021 라인 상반기 3번문제와 동일 유형.
+// Sliding Window. O(NlgN): 정렬 부분이 병목. 2021 라인 상반기 3번문제와 동일 유형.
 
 #include <iostream>
 #include <algorithm>
