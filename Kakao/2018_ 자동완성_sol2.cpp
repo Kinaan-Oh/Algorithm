@@ -1,4 +1,4 @@
-// Trie 자료구조. Time Complexity: O(mn) = O(L), Space Complexity: O(L).
+// Trie 자료구조. Time Complexity: O(L), Space Complexity: O(L).
 
 #include <string>
 #include <vector>
