@@ -1,3 +1,5 @@
+// bit를 이용한 모든 조합구현, includes를 이용한 최소성 검사. 입력 크기가 작으므로 시간복잡도가 다소 높아도 개선할 필요까지는 없는 "구현문제".
+
 #include <string>
 #include <vector>
 #include <set>
