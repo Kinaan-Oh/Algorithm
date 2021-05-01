@@ -1,4 +1,4 @@
-// O(record.length)
+// Hashtable 자료구조 . O(record.length)
 
 #include <string>
 #include <vector>
