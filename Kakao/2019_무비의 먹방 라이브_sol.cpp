@@ -6,11 +6,11 @@
 // 그러나, food_times를 감소시키는데 O(food_times.length)이기 때문에 전체 시간복잡도는 여전히 O(food_time.length^2).
 // (Idea) food_times를 감소시키지 않고 문제를 해결해야만 함. 이미 정렬한 food_times를 활용한다면, food_times를 감소시킬 필요 없이 문제 해결이 가능함.
 // "정렬된 food_times에서 0이 아닌 food_time의 갯수를 O(1)으로 쉽게 파악할 수 있음!" (food_times 감소 로직의 목적은 0이 아닌 food_time만 방문하기 위함이었으므로, 감소가 더이상 필요없음.)
-// food_times의 k%(0이 아닌 food_time의 갯수)번째 를 구하면 됨: O(food_times)
-// 따라서 전체 시간복잡도를 O(food_times.lengthlg(food_times.length) + food_times.length) = O(food_times.length * lg(food_times_.length)) 로 개선할 수 있음.
+// food_times의 k%(0이 아닌 food_time의 갯수)번째 를 구하면 됨: O(food_times.length)
+// 따라서 전체 시간복잡도를 O(food_times.length * lg(food_times.length) + food_times.length) = O(food_times.length * lg(food_times_.length)) 로 개선할 수 있음.
 // 설계를 했더라도 실제 구현은 매우 어려움.(높은 수준의 구현력을 요구)
-// 정리하면 출제의도는 "정렬 및 구현".
 // 주의사항: 효율성 2번 테스트 케이스의 경우, long long 자료형을 사용하지 않으면 rectangle이 그 값을 수용하지 못하여 fail. "자료형 활용 능력" 또한 출제 의도에 포함. 
+// 정리하면 출제의도는 "정렬, 구현, 자료형".
 // 카카오 효율성 테스트 문제에서 문제점은 시간복잡도를 어디까지 개선해야 통과할 지 알려주지 않는다는 점. 단계적으로 효율성 개선에 들어간 시간에 비해 얻는 점수가 터무니없이 적다. 
 
 #include <string>
