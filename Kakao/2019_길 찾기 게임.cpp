@@ -1,4 +1,4 @@
-// 출제의도: "이진트리의 생성(정의)/순회" Time Complexity: O(nodeinfo_length^2)(이진트리의 높이가 nodeinfo_length가 되는 경우 삽입복잡도가 최악), Space Complexity: O(node_info.length).
+// 출제의도: "이진트리의 생성(정의)/순회", Time Complexity: O(nodeinfo_length^2)(이진트리의 높이가 nodeinfo_length가 되는 경우 삽입복잡도가 최악), Space Complexity: O(node_info.length).
 
 #include <string>
 #include <vector>
