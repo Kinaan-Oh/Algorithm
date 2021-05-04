@@ -1,4 +1,4 @@
-// Time Complexity: O(priorities.length), Space Complexity: O(priorities.length)
+// Time Complexity: O(priorities.length^2), Space Complexity: O(priorities.length)
 
 #include <string>
 #include <vector>
