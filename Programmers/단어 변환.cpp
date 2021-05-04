@@ -1,4 +1,4 @@
-// 출제 의도: 최단경로 -> "BFS"
+// 출제 의도: 최단경로 -> "BFS", Time Complexity: O(words.length), Space Complexity: O(words.length)
 
 #include <string>
 #include <vector>
