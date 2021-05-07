@@ -1,4 +1,4 @@
-// 출제의도: "최단경로: BFS". Time Complexity: O(n), Space Complexity: O(n).
+// 출제의도: "최장경로: BFS or DFS". Time Complexity: O(n), Space Complexity: O(n).
 
 #include <string>
 #include <vector>
