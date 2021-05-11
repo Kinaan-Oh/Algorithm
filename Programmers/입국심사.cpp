@@ -1,4 +1,4 @@
-// 출제의도: "이분탐색", Time Complexity: O((n*times의 최대값)*lg(n*times의 최대값)).
+// 출제의도: "이분탐색", Time Complexity: O(lg(n*times의 최대값)).
 
 #include <string>
 #include <vector>
