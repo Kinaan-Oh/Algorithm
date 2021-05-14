@@ -1,8 +1,8 @@
-// 출제의도: "dfs"
+// 출제의도: "dfs".
+// 티켓의 갯수(간선 개수)에 대한 제한조건이 나와있지 않아, 전부 탐색하지 않고 인접 리스트를 선택.
 
 #include <string>
 #include <vector>
-#include <queue>
 #include <unordered_map>
 #include <iostream>
 
