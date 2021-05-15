@@ -1,5 +1,5 @@
 // 출제의도: "트라이 or 정렬 or 해시테이블". Time Complexity: O(L), L: phone_book의 모든 문자열 길이의 합.
-// 트라이-> Time Complexity: O(L), 정렬-> Time Complexity: O(NlgN+L)
+// 트라이-> Time Complexity: O(L), 정렬-> Time Complexity: O(NlgN+L) -> O(NlgN)
 
 #include <string>
 #include <vector>
