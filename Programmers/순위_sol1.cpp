@@ -1,4 +1,4 @@
-// 출제의도: "그래프 순회, 순위 개념 이해", Time Complexity: O(n^2+m), Space Complexity: O(n^2) (n: num_of_player, m: results.size)
+// 출제의도: "그래프 순회, 순위 개념 이해", Time Complexity: O(n^2+m), Space Complexity: O(m+n^2) (n: num_of_player, m: results.size)
 // 문제 핵심: 자신을 제외한 모든 노드(선수)와 relation(승패 관계)이 있어야 자신의 순위를 결정지을 수 있음.
 // 내 풀이의 경우, 승자를 추적하기 위해 역인접리스트를 1개 더 유지하여 2개의 인접리스트를 순회(승자/패자 추적)하는 형태로 수정 가능하나, Time Complexity는 O(n^2+m)으로 동일.
 // 이외에 효율성은 떨어지나, 다양한 풀이 방법이 가능(플로이드 워셜: O(n^3+m), Set: O(n^3lgn+m)).
