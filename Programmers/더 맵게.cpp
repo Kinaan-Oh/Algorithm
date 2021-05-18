@@ -1,4 +1,4 @@
-// 출제의도: "힙", Time Complexity: O(n), Space Complexity: O(n).(n: scoville.size)
+// 출제의도: "힙", Time Complexity: O(nlgn), Space Complexity: O(n).(n: scoville.size)
 
 #include <string>
 #include <vector>
