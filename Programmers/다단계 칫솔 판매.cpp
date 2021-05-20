@@ -1,4 +1,5 @@
 // 출제의도: "트리(parent배열 표현), 해시테이블", Time Complexity: O(seller.size()*h), Space Complexity: O(n). (n: enroll.size, h:노드 깊이)
+// parent 배열로 트리관계가 표현된 경우, child 배열로 변환 후 트리 구축이 가능하지만, 이 문제의 경우 트리의 구축없이 문제의 해결이 가능.(부모에서 자식 방향으로 탐색하는 문제가 아닌 자식에서 부모방향 탐)
 
 #include <string>
 #include <vector>
