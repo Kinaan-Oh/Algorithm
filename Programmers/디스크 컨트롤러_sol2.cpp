@@ -1,4 +1,4 @@
-// 출제의도: "우선순위 큐, SPN"
+// 출제의도: "우선순위 큐, SPN", Time Complexity: O(nlgn), Space Complexity: O(n). (n: jobs.size)
 
 #include <string>
 #include <vector>
