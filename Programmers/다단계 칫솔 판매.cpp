@@ -1,4 +1,4 @@
-// 출제의도: "트리,해시테이블", Time Complexity: O(seller.size()*h), Space Complexity: O(n). (n: enroll.size, h:노드 깊이)
+// 출제의도: "트리(parent배열 표현), 해시테이블", Time Complexity: O(seller.size()*h), Space Complexity: O(n). (n: enroll.size, h:노드 깊이)
 
 #include <string>
 #include <vector>
