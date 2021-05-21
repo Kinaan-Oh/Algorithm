@@ -9,7 +9,7 @@
 using namespace std;
 
 unordered_map<string,int>  ht; // [genre,count]
-unordered_map<string,int> num_of_song; // [genre,count]
+unordered_map<string,int> num_of_genre; // [genre,count]
 vector<string>  genres_copied;
 vector<int> plays_copied;
 
@@ -34,9 +34,9 @@ vector<int> solution(vector<string> genres, vector<int> plays) {
     for(int i=0;i<genres.size();i++)    id.push_back(i);
     sort(id.begin(),id.end(),compare);
     for(int i=0;i<id.size();i++) {
-        if(num_of_song[genres[id[i]]]<2) {
+        if(num_of_genre[genres[id[i]]]<2) {
             answer.push_back(id[i]);
-            num_of_song[genres[id[i]]]++;
+            num_of_genre[genres[id[i]]]++;
         }
     }
     return answer;
