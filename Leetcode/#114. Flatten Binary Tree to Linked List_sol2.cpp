@@ -6,17 +6,15 @@ public:
     void flatten(TreeNode* root) {
         while(root) {
             TreeNode *left = root->left;
-            if(left==nullptr) {
-                root = root->right;
-                continue;
+            if(left)
+            {
+                while(left->right) {
+                    left = left->right;
+                }
+                left ->right = root->right;
+                root->right = root->left;
+                root->left = nullptr;
             }
-            
-            while(left->right) {
-                left = left->right;
-            }
-            left ->right = root->right;
-            root->right = root->left;
-            root->left = nullptr;
             root = root->right;
         }
     }
