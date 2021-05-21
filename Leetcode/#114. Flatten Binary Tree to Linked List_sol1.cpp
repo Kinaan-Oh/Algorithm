@@ -1,4 +1,4 @@
-// 출제의도 : "이진트리, 구현(재귀/반복)", Time Complexity: O(n), Space Complexity: O(n). (n: 노드갯수)
+// 출제의도 : "이진트리, 구현(재귀)", Time Complexity: O(n), Space Complexity: O(n). (n: 노드갯수)
 // Reculsive 구현방식
 class Solution {
 public:
