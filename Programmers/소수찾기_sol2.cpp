@@ -1,4 +1,4 @@
-// "에라스토테네스의 체"로 소수를 미리 구하는 방법. Time Complexity: O(2^n * n! + 10^n * lgn), Space Complexity: O(10^n).
+// "에라스토테네스의 체"로 소수를 미리 구하는 방법. Time Complexity: O(2^n * n! + 10^n * lgn), Space Complexity: O(2^n * n! + 10^n).
 // 입력 n이 7이하로 매우 작으므로, 해당 범위에서 에라토스테네스의 체가 병목. n이 매우 커진다면, sol1 보다 좋은 코드가 될 수 있을 것이지만, n이 작다면 좋지 않음.
 
 #include <string>
