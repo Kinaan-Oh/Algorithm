@@ -1,4 +1,4 @@
-// 출제의도: "조합(비트마스크), 순열, 소수", Time Complexity: O(2^n * n! * 10^n) = O(10^n * n!), Space Complexity: O(2^n * n!). (n: numbers.size)
+// 출제의도: "조합(비트마스크), 순열, 소수", Time Complexity: O(2^n * n! * 10^(n/2)) = O(10^(n/2) * n!), Space Complexity: O(2^n * n!). (n: numbers.size)
 // 카카오 "후보키"와 동일한 원리(비트마스크). 입력크기 n이 최악의 경우 7로 매우 작기 때문에, 높은 시간복잡도의 구현방식이 출제의도가 될 수 있음.
 
 #include <string>
