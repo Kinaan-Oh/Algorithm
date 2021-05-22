@@ -1,5 +1,6 @@
 // 출제의도: "합성수", Time Complexity: O(yellow^(1/2)), Space Complexity: O(1).
 // 합성수의 성질을 이용하면 h를 sqrt(yellow)까지만 확인하면 됨.
+
 #include <string>
 #include <vector>
 #include <cmath>
