@@ -1,5 +1,5 @@
 // 출제의도: "greedy", Time Complexity: O(n), Space Complexity: O(1). (n: number.size)
-// 스택 자료구조를 이용하여 해결.
+// sol1과 원리는 동일. 스택 자료구조를 이용하여 효율적으로 해결.
 
 #include <string>
 #include <vector>
