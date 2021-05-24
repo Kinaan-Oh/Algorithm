@@ -1,4 +1,4 @@
-//  출제의도: "greedy", Time Complexity: O(n^2), Space Complexity: O(1). (n: number.size)
+//  출제의도: "greedy", Time Complexity: O(n*k), Space Complexity: O(1). (n: number.size)
 //  number[i]<number[i+1] 인 가장 앞인 i를 제거. 만약, 내림차순 정렬되어있다면 가장 뒤의 원소를 제거.
 
 #include <string>
