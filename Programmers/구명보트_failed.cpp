@@ -1,5 +1,6 @@
 // 출제의도 : "greedy", Time Complexity: O(n^3), Space Complexity: O(1).
-// 보트에 태울 수 있는 모든 조합을 따짐.
+// 보트에 태울 수 있는 가장 큰 무게를 태움.
+// 보트에 태울 수 있는 승객의 모든 조합을 따짐. -> 비효율적
 
 #include <string>
 #include <vector>
