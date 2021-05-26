@@ -27,7 +27,7 @@ int solution(int n, vector<vector<int>> costs) {
   
     sort(costs.begin(),costs.end(),compare);
     
-    for(int i=0;i<costs.size() && num_of_edge<n;i++) {
+    for(int i=0;i<costs.size() && num_of_edge<n-1;i++) {
         int root1 = find(costs[i][0]);
         int root2 = find(costs[i][1]);
         
