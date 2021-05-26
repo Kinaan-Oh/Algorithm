@@ -1,4 +1,4 @@
-
+//  출제의도: "구현"
 
 #include <string>
 #include <vector>
