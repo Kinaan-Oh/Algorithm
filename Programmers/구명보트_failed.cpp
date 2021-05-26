@@ -1,4 +1,5 @@
 // 출제의도 : "greedy", Time Complexity: O(n^3), Space Complexity: O(1).
+// 보트에 태울 수 있는 모든 조합을 따짐.
 
 #include <string>
 #include <vector>
