@@ -1,4 +1,4 @@
-// 출제의도: "minimum spanning tree, greedy", Time Complexity: O(ElgE), Space Complexity: O(n). (E: costs.size)
+// 출제의도: "minimum spanning tree(kruskal), greedy", Time Complexity: O(ElgE), Space Complexity: O(n). (E: costs.size)
 // Union by Height, Path Compression(find)으로 최적화. 정렬(ElgE)이 병목. 이후 반복문(union-find)은 Elg*n(E:costs.size, lg*: 로그 스타)
 
 #include <string>
