@@ -1,5 +1,5 @@
 // 출제의도: "이진트리, 재귀", Time Complexity: O(n), Space Complexity: O(n). (n: 트리 노드의 갯수)
-// 점화식: 어떤 트리의 maximum path sum = max(root를 포함하는 path, leftsubtree의 maximum path sum, rightsubtree의 maximum path sum).
+// 점화식: 어떤 트리의 maximum path sum = max(root를 포함하는 max path, leftsubtree의 maximum path sum, rightsubtree의 maximum path sum).
 // maxPathSum에서 maxDistToLeaf의 중복호출을 막이 위해 메모이제이션(dp) 사용. 주어지는 트리정보로 각 노드를 식별하기 어려워서 TreeNode*를 키(key)로한 해시테이블을 구성. 
 
 class Solution {
