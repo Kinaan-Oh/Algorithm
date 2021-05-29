@@ -1,4 +1,4 @@
-// Time Complexity: O(n), Space Complexity: O(n). (n: s.length)
+// 출제의도: "문자열", Time Complexity: O(n), Space Complexity: O(n). (n: s.length)
 
 #include <string>
 #include <vector>
