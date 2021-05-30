@@ -1,4 +1,4 @@
-// 출제의도: "sliding window", Time Complexity: O(n), Space Complexity: O(n). (n: gems.size)
+// 출제의도: "Sliding window", Time Complexity: O(n), Space Complexity: O(n). (n: gems.size)
 
 #include <string>
 #include <vector>
