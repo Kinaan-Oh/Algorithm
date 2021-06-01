@@ -1,7 +1,7 @@
 // "Monotone Queue", Time Complexity: O(n), Space Complexity: O(k). (n: stones.size)
 // i를 끝점으로 하는 길이 k인 윈도우 [i-k+1,i]에서 i+1 원소를 윈도우의 끝점으로 포함할 때, i+1번째 원소보다 크기가 작거나 같은 원소들을 제거(pop_back) 후 가장 뒤에 삽입.
 // 이후, 윈도우에 포함되지 않게된 원소들을 제거(pop_front). 가장 앞의 원소가 현 윈도우의 최대값. 해당 과정을 반복하면 deque는 단조감소(stones 값) 상태를 유지하게 된다.
-// 총 n번의 push_back(O(1)), n번 이하의 pop_back(O(1)) 연산이 발생. 따라서 전체 시간복잡도는 O(n).
+// 총 n번의 push_back(O(1)), n번 미만의 pop_back(O(1)) 연산이 발생. 따라서 전체 시간복잡도는 O(n).
 
 #include <string>
 #include <vector>
