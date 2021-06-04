@@ -1,5 +1,5 @@
 // 출제의도: "리스트, 해시테이블, 재귀(그래프 dfs)", Time Complexity: O(n), Space Complexity: O(n). (n: list.length)
-// 핵심 아이디어: list를 graph로 간주할 수 있다.
+// 핵심 아이디어: list를 graph로 간주할 수 있다. 즉, 그래프틑 copy하는 문제와 동일.
 // dfs로 기존 list를 순회하면서, next와 random의 노드가 없다면 생성하여 붙여주고, 이미 생성했다면 붙여주기만 한다. 이미 copied되었는지 파악하기 위해 해시 테이블을 사용한다.
 
 class Solution {
