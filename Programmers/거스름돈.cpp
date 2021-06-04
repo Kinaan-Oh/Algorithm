@@ -14,9 +14,6 @@ using namespace std;
 
 int dp[100][100000]; // dp[i][j] : 0~i번째 화폐를 사용하여 j원을 만드는 경우의 수
 
-// dp[i][j] = dp[i-1][j]                       (money[i]>k)
-//          = dp[i][j-money[i]] + dp[i-1][j]   (money[i]<=k)
-
 int solution(int n, vector<int> money) {
     int answer = 0;
     for(int j=0;j<=n;j++) {
