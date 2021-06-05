@@ -1,4 +1,4 @@
-// "Brute Force", Time Complexity: O(n^4), Space Complexity: O(1). (n: s.length)
+// "String, Brute Force", Time Complexity: O(n^4), Space Complexity: O(1). (n: s.length)
 // 
 
 #include <iostream>
