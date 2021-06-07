@@ -1,4 +1,5 @@
-// "Prefix Sum", Time Complexity: O()n^2, Space Complexity: O(n).
+// "Prefix Sum", Time Complexity: O(n^2), Space Complexity: O(n).
+// Prefix Sum을 이용하여 풀었으나, Brute Force하게 풀어도 O(n^2).
 
 #include <string>
 #include <vector>
