@@ -1,4 +1,4 @@
-// 출제의도: "Hash Table(Dictionary)", Time Complexity: O(L), Space Complexity: O(n). (L: record 모든 문자열 길이의 합)
+// 출제의도: "Hash Table(Dictionary)", Time Complexity: O(L), Space Complexity: O(n). (L: record 모든 문자열 길이의 합, n: record.size)
 
 import Foundation
 
