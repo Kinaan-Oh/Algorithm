@@ -1,4 +1,4 @@
-// Hashtable 자료구조 . O(record.length)
+// Hashtable 자료구조. Time Complexity: O(L), Space Complexity: O(L). (L: record 모든 문자열 길이의 합)
 
 #include <string>
 #include <vector>
