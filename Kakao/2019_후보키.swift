@@ -1,4 +1,4 @@
-// 출제의도: "Bitmask"
+// 출제의도: "Bitmask, 완전탐색"
 // (1) HashSet -> 중복성 검사 (2) BitMask -> 유일성 검사
 // "a&b == a" or "a|b == b" : a가 b에 포함된다.
 
