@@ -1,4 +1,4 @@
-// Time Limit Exceeded. update_order의 Time Complexity는 O(n) (n: cache.size). 따라서, get고 put의 Time Complexity도 O(n).
+// Time Limit Exceeded. update_order의 Time Complexity는 O(n) (n: cache.size). 따라서, get과 put의 Time Complexity도 O(n).
 // update_order의 Time Complexity를 O(1)로 줄일 수 있는 방법이 필요함.
 
 class LRUCache {
