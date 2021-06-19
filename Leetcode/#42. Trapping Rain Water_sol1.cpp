@@ -1,4 +1,4 @@
-// NHN 코테 2번 문제와 동일. 현장에서 이 방법으로 풀이함.
+// N사 코테 2번 문제와 동일. 현장에서 이 방법으로 풀이함.
 // "Brute Force", Time Complexity: O(n), Space Complexity: O(1). (n: height.size)
 // idea: 직전 높이와 같거나 큰 높이를 만나게 될 때까지 빗물은 고인다.
 // 왼쪽에서 오른쪽으로, 오른쪽에서 왼쪽으로 2번 탐색.
