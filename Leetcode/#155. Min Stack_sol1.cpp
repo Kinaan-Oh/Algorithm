@@ -1,5 +1,6 @@
 // "Design", Time Complexity: O(1) (push/pop/top/getMin), Space Complexity: O(n) (n: operation 갯수)
-// minStack에 원소 삽입시, 해당 원소를 포함한 지금까지의 최소원소 value를 minValues에 저장. 나는 minStack과 minValues 두 vector 자료구조를 이용했지만, pair로 관리한다면 하나로 합칠 수 있다.
+// minStack에 원소 삽입시, 해당 원소를 포함한 지금까지의 최소원소 value를 minValues에 저장. 나는 minStack과 minValues 두 vector 자료구조를 이용했지만, pair로 관리한다면 하나로 합쳐
+// Space Complexity를 절반으로 줄일 수 있다.
 
 class MinStack {
 private:
