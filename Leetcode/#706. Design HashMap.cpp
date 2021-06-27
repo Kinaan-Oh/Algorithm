@@ -1,5 +1,6 @@
 // 출제의도: "Design", Time Complexity: O(lg(n/k)), Space Complexity: O(m+k). (n: 가능한 모든 key의 값, k: bucket 갯수, m: 삽입한 원소 갯수)
 // 해시 함수로 제산 함수(division)을 선택하였고 체이닝 기법을 사용하였다. 일반적으로 두 기법의 사용은 가장 좋은 성능을 낸다.
+// 제산 함수의 제수는 소수를 선택하는 것이 좋다. 그 이유는 클러스터링을 방지하는 효과 때문이다. 따라서 소수인 4093을 선택하였다.
 // 다만, 적재 밀도가 커지게 되면 성능이 떨어지고 다음과 같은 재조정이 필요하다.  1) 기존 해시테이블 크기의 2배인 해시테이블을 잡고  2) 해시 함수의 나눗셈 값을 새로운 해시 테이블 크기로 변경 해주고
 // 3) 기존 해시테이블 원소를 새 해시테이블에 다시 삽입 한다. 
 // 제조정은 굳이 구현하지는 않았다. 다만 정적 해싱의 재조정은 큰 오버헤드로 핵심 문제이고, 이는 동적 해싱(디렉터리 사용유무에 따라 유형이 갈림.)의 출현의 이유가 된다.
@@ -28,15 +29,15 @@ struct HashTable {
     vector<Bucket>  buckets;
     
     void put(int key, int value) {
-        buckets[(key)%4096].put(key,value);
+        buckets[(key)%4093].put(key,value);
     }
     
     int get(int key) {
-        return buckets[key%4096].get(key);
+        return buckets[key%4093].get(key);
     }
     
     void remove(int key) {
-        buckets[key%4096].remove(key);
+        buckets[key%4093].remove(key);
     }
     
     void resize(int size) {
@@ -51,7 +52,7 @@ private:
 public:
     /** Initialize your data structure here. */
     MyHashMap() {
-        hashtable.resize(4096);
+        hashtable.resize(4093);
     }
     
     /** value will always be non-negative. */
