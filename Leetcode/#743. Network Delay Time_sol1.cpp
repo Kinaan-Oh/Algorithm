@@ -26,7 +26,7 @@ public:
         
         while(!pq.empty()) {
             int node = pq.top().second;
-            int distance = pq.top().first;
+            int distance = -pq.top().first;
             pq.pop();
             if(dist[node]<distance)    continue;
             
@@ -35,7 +35,7 @@ public:
                 
                 if(dist[node]+weight<dist[neighbor]) {
                     dist[neighbor] = dist[node]+weight;
-                    pq.push({dist[neighbor],neighbor});
+                    pq.push({-dist[neighbor],neighbor});
                 }
             }
         }
