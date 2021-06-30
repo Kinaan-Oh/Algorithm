@@ -1,4 +1,4 @@
-// "벨만-포도 SPFA", Time Complexity: O(VE), A(E), Space Complexity: O(V+E).
+// "벨만-포드 SPFA", Time Complexity: O(VE), A(E), Space Complexity: O(V+E).
 // 기존 벨만 포드 알고리즘의 경우 모든 edge의 relaxation을 고정적으로 n-1번 반복.(최대 n-1개 edge를 경로에 포함)
 // SPFA는 relaxation된 정점을 기준으로 다음에 relaxation 할 정점들을 결정.
 // 음의 사이클은 임의 한 정점이 n번이상 큐에 삽입되면 형성된 것으로 판단. 이는 근본적으로 기존 벨만포드 알고리즘이 n번째 반복 때 relaxation이 되면 음의 사이클이 형성된 것으로 판단하는 것과 동일한 논리.
