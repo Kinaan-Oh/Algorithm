@@ -16,7 +16,7 @@ public:
                 monotone_que.pop_back();
             }
             monotone_que.push_back({i,nums[i]});
-            while(!monotone_que.empty() && i-monotone_que.front().first+1>k) {
+            if(!monotone_que.empty() && i-monotone_que.front().first+1>k) {
                 monotone_que.pop_front();
             }
             
