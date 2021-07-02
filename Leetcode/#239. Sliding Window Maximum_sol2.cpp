@@ -1,4 +1,5 @@
 // "Monotone Queue", Time Complexity: O(n), Space Complexity: O(n). (n: nums.size)
+// 2019 카카오 인턴 징검다리 문제와 동일. (idx,value) pair로 관리했었으나, 단순히 idx로 관리하는 방법으로 개선.(더 간단)
 // 큐를 단조 감소 상태로 유지. 즉, 새로 삽입할 원소보다 영향력이 작거나 같은 윈도우 내 원소들을 제거 후 삽입을 반복.
 // 1) 삽입할 원소보다 작거나 같은 원소들을 큐의 뒤에서부터 제거.
 // 2) 원소 삽입
@@ -9,18 +10,18 @@ class Solution {
 public:
     vector<int> maxSlidingWindow(vector<int>& nums, int k) {
         vector<int> ans;
-        deque<pair<int,int>>  monotone_que; // (idx,value)
+        deque<int>  monotone_que; // idx
         
         for(int i=0;i<nums.size();i++) {
-            while(!monotone_que.empty() && monotone_que.back().second<=nums[i]) {
+            while(!monotone_que.empty() && nums[monotone_que.back()]<=nums[i]) {
                 monotone_que.pop_back();
             }
-            monotone_que.push_back({i,nums[i]});
-            if(!monotone_que.empty() && i-monotone_que.front().first+1>k) {
+            monotone_que.push_back(i);
+            if(i-monotone_que.front()+1>k) {
                 monotone_que.pop_front();
             }
             
-            if(i>=k-1)  ans.push_back(monotone_que.front().second);
+            if(i>=k-1)  ans.push_back(nums[monotone_que.front()]);
         }
         
         return ans;
