@@ -1,4 +1,5 @@
-// "Recursion", Time Complexity: O(m+n), Space Complexity: O(m+n)
+// "Recursion", Time Complexity: O(m+n), Space Complexity: O(m+n).(m: l1의 노드 갯수, n: l2의 노드 갯수)
+// System Stack은 재귀호출로 인해 Worst Case는 Space Complexity: O(m+n).
 
 class Solution {
 public:
