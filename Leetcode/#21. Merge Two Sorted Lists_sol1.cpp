@@ -1,5 +1,6 @@
-// "iteration", Time Complexity: O(m+n), Space Complexity: O(m+n) (m: l1 노드 갯수, n: l2 노드 갯수)
+// "iteration", Time Complexity: O(m+n), Space Complexity: O(1) (m: l1 노드 갯수, n: l2 노드 갯수)
 // merge sort의 merge 구현 방법과 동일.
+// Space Complexity는 기존 l1, l2 노드를 head에 옮겨주는 것이기 때문에 O(1).
 
 class Solution {
 public:
