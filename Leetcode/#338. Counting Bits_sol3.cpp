@@ -1,5 +1,6 @@
 // "DP", Time Complexity: O(n), Space Complexity: O(n).
 // idea: 임의의 수 k에 대하여 k/2는 least significant bit를 제외한 왼쪽 비트들로 구성된 이진수(자리수는 1씩 낮아진다.)를, k%2는 least significant bit를 의미한다.
+// 위 idea는 이미 카카오 공채에 기출된적있는 개념.
 
 class Solution {
 public:
