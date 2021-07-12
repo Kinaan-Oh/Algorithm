@@ -2,6 +2,13 @@
 // convert_pos_hashable(vector<Pos> pos)모듈 구현시 각 좌표별로 구분자가 꼭 필요함. 예를들어, 1,10,0,0 과 11,0,0,0을 구분하기 위해서 구분자가 필요. 이 부분을 고려하지 못하여, 2시간동안 디버깅.
 // -> 독립적인 데이터들을 하나로 묶을 경우, 데이터간 간섭을 막기 위해 구분자가 필요하다는 것을 배움.
 
+// <7/12 리뷰>
+// 1) unordered_map을 unordered_set으로 대체하는 것이 보다 나을 것 같다.
+// 2) isOutOfBound 네이밍을 is_out_of_bound로 바꾸는 것이 일관적일 것 같다.
+// 3) bfs 모듈 코드길이가 세로로 지나치게 길어 가독성이 많이 떨어짐. 모듈화를 통해 보다 간결하게 리팩토링이 필요함.
+// 4) vector를 set의 key로 사용하는 것은 어려움.(hash를 직접 구현해야함. 반면 swift는 Hashable을 이용하여 간단하게 사용할 수 있음.) string을 key로 하기위해 vector를 string으로 변환하는 과정에 
+// 있어 데이터 사이의 구분자가 필요.
+
 #include <string>
 #include <vector>
 #include <algorithm>
