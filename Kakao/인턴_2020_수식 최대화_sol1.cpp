@@ -2,7 +2,7 @@
 
 // [7/14 리뷰]
 // 순열을 활용한 완전탐색으로 풀이하였으나 다른 좋은 접근법을 뒤늦게 발견하였다.
-// 1. #241. Different Ways to Add Parentheses 에서 활용한 분할정보+메모이제이션 방법.
+// 1. #241. Different Ways to Add Parentheses 에서 활용한 분할정복 방법.
 // 2. 중위표기식을 후위표기식으로 변환 후, 스택 계산.
 
 #include <string>
