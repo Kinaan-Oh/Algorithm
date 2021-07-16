@@ -29,8 +29,8 @@ extension String {
 }
 
 enum RegExType: String {
-    case set = "\\{.*?\\}"
-    case elem = "\\d+"
+    case set = #"\{.*?\}"#
+    case elem = #"\d+"#
 }
 
 func solution(_ param0:String) -> [Int] {
