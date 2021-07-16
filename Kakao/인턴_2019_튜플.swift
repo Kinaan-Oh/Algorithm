@@ -1,6 +1,16 @@
 // "정규 표현식 or 문자열 처리", Time Complexity: O(n), Space Complexity: O(n) (n: s.length)
 // String의 split 이나 components를 이용하여 간단하게 구현 가능하나, 정규 표현식 학습을 목표로 구현.
 
+// [7/17 리뷰] : swift는 # # 을 제공. \를 중복해서 적어줘야되는 불편함을 해소할 수 있음.
+//     case set = "\\{.*?\\}"
+//     case elem = "\\d+"
+// 을 
+//     case set = #"\{.*?\}"#
+//     case elem = #"\d+"#
+// 로 변경.
+
+
+
 import Foundation
 
 extension String {
