@@ -1,4 +1,5 @@
 // "BST-Inorder Traverse, Two-Pointer", Time Complexity: O(n), Space Complexity: O(n). (n: root 노드 갯수)
+// 이외에 Hash Set을 이용한 2-Pass 방법(O(n))이 있음.
 
 class Solution {
 private:
