@@ -8,6 +8,9 @@ private:
     
 public:
     vector<string> letterCombinations(string digits) {
+        if(digits.length() == 0) {
+            return answer;
+        }
         init();
         generateLetterCombinations(digits, "", 0);
         
