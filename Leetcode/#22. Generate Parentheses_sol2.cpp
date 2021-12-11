@@ -1,4 +1,4 @@
-// BackTrack, Time Complexity: O(4^n/n^3/2), Space Complexity: O(n).
+// BackTrack, Time Complexity: O(4^n/n^3/2), Space Complexity: O(4^n/n^3/2).
 // 전형적인 Catalan Number 문제.
 // 점화식: Cn = C0*Cn-1 + C1*Cn-2 + .. + Cn-2*C1 + Cn-1*C0.
 // Stirling’s approximation에 의해 Time Complexity는 4^n/n^3/2 로 근사된다.
