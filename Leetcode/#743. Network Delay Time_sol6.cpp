@@ -4,44 +4,47 @@
 // 2)의 경우 vector을 이용한 구현은 key가 Int가 아닌 경우(예를 들면 문자열) 처리가 번거로운 반면, 해시 테이블을 이용하면 처리가 간단해지고 성능은 동일하다.
 // 결론: "set"과 "hash table"을 이용한 다익스트라 구현은 구현 난이도/성능 등 모든 면에서 sol1보다 우월하다.
 
+// 12/21 Refactor: 좀더 간결하게 개선. vector 대신 deq으로 변경.(이 문제에서는 vector로도 충분하지만, 그래프 문제에서 deq 시간개선측면에서 유리한 경우가 많음)
 
 class Solution {
 private:
-    int dist[101];  // 1~100
-    unordered_map<int, vector<pair<int,int>>>  adjList;  // (weight, neighbor)
+    int dist[101];
+    int answer;
+    unordered_map<int, deque<pair<int, int>>> adjList;  //  (neighbor, weight)
+    
 public:
     int networkDelayTime(vector<vector<int>>& times, int n, int k) {
-        int dist_max = 0;
-        fill(&dist[0],&dist[0]+101,INT_MAX);
-        for(int i=0;i<times.size();i++) {
-            int u = times[i][0], v = times[i][1], weight = times[i][2];
-            adjList[u].push_back({weight,v});
-        }
+        init(times);
         
-        set<pair<int,int>>  set;    // (dist, node)
-        dist[k] = 0;
-        set.insert({0,k});
+        set<pair<int, int>> bst;    // (dist, node)
+        bst.insert({0, k});
         
-        while(!set.empty()) {
-            auto cur = set.begin();
-            int distance = (*cur).first;
-            int node = (*cur).second;
-            set.erase(cur);
+        while(!bst.empty()) {
+            auto begin = bst.begin();
+            int distance = (*begin).first; int node = (*begin).second;
+            bst.erase(begin);
             
-            for(int i=0;i<adjList[node].size();i++) {
-                int neighbor = adjList[node][i].second, weight = adjList[node][i].first;
-                
-                if(dist[node]+weight<dist[neighbor]) {
-                    dist[neighbor] = dist[node]+weight;
-                    set.insert({dist[neighbor], neighbor});
-                }
+            if(dist[node]!=INT_MAX)    continue;
+            dist[node] = distance;
+            
+            for(auto edge: adjList[node]) {
+                bst.insert({distance+edge.second, edge.first});
             }
         }
         
         for(int i=1;i<=n;i++) {
             if(dist[i]==INT_MAX)    return -1;
-            dist_max = max(dist_max, dist[i]);
+            answer = max(answer, dist[i]);
         }
-        return dist_max;
+        return answer;
+    }
+    
+    void init(vector<vector<int>>& times) {
+        fill(dist, dist+101, INT_MAX);
+        answer = 0;
+        
+        for(auto time: times) {
+            adjList[time[0]].push_back({time[1], time[2]});
+        }
     }
 };
