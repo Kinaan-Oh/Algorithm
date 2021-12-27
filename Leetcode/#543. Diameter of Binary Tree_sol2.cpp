@@ -1,4 +1,4 @@
-// 4ms으로 sol1과 동등한 성능. 
+// 8ms으로 sol1과 동등한 성능. 
 // 점화식 : diameter = Max of 1) diameter of left subtree
 //                          2) diameter of right subtree
 //                          3) depth of left subtree + depth of right subtree
