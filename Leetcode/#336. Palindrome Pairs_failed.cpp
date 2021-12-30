@@ -1,4 +1,4 @@
-// Try: Brute-Froce, Time Complexity: O(n^3), Space Complexity: O(n^2). (n: words.size)
+// Try: Brute-Froce, Time Complexity: O(n^2*k), Space Complexity: O(n^2). (n: words.size, k: sum of length of words)
 // 84 / 136 test cases passed. Time Limit Exceeded.
 
 class Solution {
