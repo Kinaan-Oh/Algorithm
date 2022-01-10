@@ -15,7 +15,8 @@ public:
         bool isPossible = false;
         
         for(int i=1;i<=nums[cur];i++) {
-            if(cur+i<nums.size() && !visited[cur+i]) {
+            if(cur+i>=nums.size())  break;
+            if(!visited[cur+i]) {
                 visited[cur+i] = true;
                 isPossible = dfs(nums, visited, cur+i);
                 
