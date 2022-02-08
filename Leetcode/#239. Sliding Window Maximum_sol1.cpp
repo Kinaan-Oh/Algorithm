@@ -2,6 +2,8 @@
 // "2019 카카오인턴 징검다리건너기"와 사실상 동일한 문제.
 // 1) 내부적으로 정렬된 2) 중복 원소를 허용하는 3) 임의 원소의 삭제가 가능한 자료구조인 multiset을 선택. C++의 priority_queue는 임의 원소 삭제를 제공하지 않음.
 
+// 2022/02/08 ReDo: 동일한 방법으로 풀이. set size <= k 이기 때문에, insert/erase time complexity는 worst case O(lgk)가 된다. 따라서, 총 time complexity는 O(nlgk).
+
 class Solution {
 public:
     vector<int> maxSlidingWindow(vector<int>& nums, int k) {
