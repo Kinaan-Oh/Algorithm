@@ -6,6 +6,9 @@
 // 3) 윈도우에 포함되지 않게 된 원소를 큐의 앞에서부터 제거.
 // 4) 큐의 가장 앞 원소가 윈도우의 최대값.
 
+// 2022/02/09 ReDo: 동일한 방법으로 풀이. monotone decrease 상태로 원소들을 유지하여, 1) 구간내의 Maximum을 O(1)에 접근하고 2) maximum을 O(1)로 pop하기 위해
+// deque 자료구조 선택(front()에서 접근가능하고 pop_front()의 timecomplexity는 O(1)).
+
 class Solution {
 public:
     vector<int> maxSlidingWindow(vector<int>& nums, int k) {
