@@ -30,3 +30,26 @@ public:
         return max(left_depth,right_depth)+1;
     }
 };
+
+// 2022/02/11 ReDo: max_depth를 좀더 적절한 height로 변경.
+
+class Solution {
+private:
+    int diameter = 0;
+    
+public:
+    int diameterOfBinaryTree(TreeNode* root) {
+        heightOf(root);
+        return diameter;
+    }
+    
+    int heightOf(TreeNode* root) {
+        if(root == nullptr)    return -1;
+        
+        int heightOfLeftSubtree = heightOf(root->left);
+        int heightOfRightSubtree = heightOf(root->right);
+        
+        diameter = max(diameter, heightOfLeftSubtree + heightOfRightSubtree + 2);
+        return max(heightOfLeftSubtree, heightOfRightSubtree) + 1;
+    }
+};
