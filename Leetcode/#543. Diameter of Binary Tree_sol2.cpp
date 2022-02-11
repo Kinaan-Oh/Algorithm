@@ -25,3 +25,27 @@ public:
         return depth[root];
     }
 };
+
+// 2022/02/11 Redo: 개선점) 메서드 2개로 줄였고, 잘못된 네이밍 depth를 height로 변경.
+
+class Solution {
+private:
+    unordered_map<TreeNode*,int>    height;
+    
+public:
+    int diameterOfBinaryTree(TreeNode* root) {
+        if(root == nullptr)    return 0;
+        
+        return max(max(diameterOfBinaryTree(root->left),
+                       diameterOfBinaryTree(root->right)),
+                  heightOf(root->left) + heightOf(root->right) + 2);
+    }
+    
+    int heightOf(TreeNode* root) {
+        if(height.find(root) != height.end())  return height[root];
+        else if(root == nullptr)    return -1;
+        
+        height[root] = max(heightOf(root->left), heightOf(root->right)) + 1;
+        return height[root];
+    }
+};
