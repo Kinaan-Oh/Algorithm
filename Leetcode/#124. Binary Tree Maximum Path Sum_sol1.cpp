@@ -25,3 +25,32 @@ public:
         return dp[root] = maxDist;
     }
 };
+
+// 02/12 ReDo: Node Value가 Negative일 수 있다는 점이 문제해결의 핵심. 최적(최대)값을 만들기 위해서는 Negative는 Prune 해야 함.
+
+class Solution {
+private:
+    unordered_map<TreeNode*,int>    dp;
+    
+public:
+    int maxPathSum(TreeNode* root) {
+        if(root == nullptr)    return INT_MIN;
+        
+        int maxPathSumIncludingRoot = root->val;
+        if(maxPathSumToLeaf(root->left)>0)    maxPathSumIncludingRoot += maxPathSumToLeaf(root->left);
+        if(maxPathSumToLeaf(root->right)>0)   maxPathSumIncludingRoot += maxPathSumToLeaf(root->right);   
+
+        return max(max(maxPathSum(root->left), maxPathSum(root->right)),
+                   maxPathSumIncludingRoot);
+    }
+    
+    int maxPathSumToLeaf(TreeNode* root) {
+        if(root == nullptr)    return 0;
+        else if(dp.find(root) != dp.end())  return dp[root];
+        
+        if(maxPathSumToLeaf(root->left)>0)  dp[root] = max(dp[root], maxPathSumToLeaf(root->left));
+        if(maxPathSumToLeaf(root->right)>0) dp[root] = max(dp[root], maxPathSumToLeaf(root->right));
+        dp[root] += root->val;
+        return dp[root];
+    }
+};
