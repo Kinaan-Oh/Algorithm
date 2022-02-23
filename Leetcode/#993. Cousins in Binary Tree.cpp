@@ -1,4 +1,5 @@
 // DFS, Time Complexity: O(n), Space Complexity: O(h) (n: num of nodes, h: height of tree)
+// 다른 풀이도 있지만, 효율성이 같고 가독성측면에서 내 풀이가 더 우월하였음.
 
 class Solution {
 private:
