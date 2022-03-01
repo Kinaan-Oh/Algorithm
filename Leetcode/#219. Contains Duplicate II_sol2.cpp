@@ -9,8 +9,8 @@ public:
         for(int i=0;i<nums.size();i++) {
             if(bst.find(nums[i]) != bst.end())  return true;
             
-            if(i>=k)    bst.erase(bst.find(nums[i-k]));
             bst.insert(nums[i]);
+            if(i>=k)    bst.erase(bst.find(nums[i-k]));
         }
         return false;
     }
