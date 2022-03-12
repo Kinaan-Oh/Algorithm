@@ -24,3 +24,28 @@ public:
         }
     }
 };
+
+// Redo 2022/03/12. Combination/DFS, Time Complexity: O(nCk), Space Complexity: O(k)
+
+class Solution {
+private:
+    vector<vector<int>> answer;
+public:
+    vector<vector<int>> combine(int n, int k) {
+        dfs({}, 1, n, k);
+        return answer;
+    }
+    
+    void dfs(vector<int> prev, int start, int n, int k) {
+        if(prev.size()==k) {
+            answer.push_back(prev);
+            return;
+        }
+        
+        for(int i=start;i<=n;i++) {
+            vector<int> cur = prev;
+            cur.push_back(i);
+            dfs(cur, i+1, n, k);
+        }
+    }
+};
