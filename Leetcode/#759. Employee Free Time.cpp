@@ -1,4 +1,4 @@
-// Heap, Time Complexity: O(nlgn), Space Complexity: O(n: num of intervals)
+// Sort, Time Complexity: O(nlgn), Space Complexity: O(n: num of intervals)
 // 논리: right most end time을 memoize하기 위해 rightmost 선언. if new interval is higher than rightmost -> we find free timeinterval.
 
 class Solution {
