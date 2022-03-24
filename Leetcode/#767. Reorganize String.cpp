@@ -2,7 +2,7 @@
 // 논리: 1) most frequent한 char를 둘을 뽑아 교대로 배치하면 two adjacent characters are not the same을 보장한다.
 //      1-1) 1)은 전체 해집합의 부분해에 지나지 않는다.
 //      2) char의 frequency를 hash에 memoize
-//      3) memoize된 frequency를 바탕으로 heap을 이용하여 효율적으로 frequency 우선 탐색가능 (frequency가 동일한 경우, lexicographically order로 리턴처리 하지 않으면 )
+//      3) memoize된 frequency를 바탕으로 heap을 이용하여 효율적으로 frequency 우선 탐색가능 (frequency가 동일한 경우, lexicographically order로 리턴처리 하지 않으면 오류)
 //      4) 배치중 adjacent char이 same인 경우 예외처리. ("" 리턴)
 
 class Solution {
