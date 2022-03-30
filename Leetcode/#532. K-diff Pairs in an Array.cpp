@@ -1,4 +1,4 @@
-// Two-Pointer, Time Complexity: O(n), Space Complexity: O(1) (n: nums.size)
+// Two-Pointer, Time Complexity: O(nlgn), Space Complexity: O(1) (n: nums.size)
 // 논리:  1) Two-Pointer 탐색을 위해 Sort.
 //       2) 조건 i != j, nums[i] - nums[j] == k 인 pair을 탐색하기 위해 포인터 p1(left), p2(right) 초기 위치를 0, 1로 설정
 //       3) gap>k 이면 p1+=1, gap<k 이면 p2+=1.
