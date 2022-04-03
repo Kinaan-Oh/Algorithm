@@ -32,3 +32,42 @@ public:
         }    
     }
 };
+
+// 2022/04/03 ReDo
+
+class Solution {
+public:
+    vector<vector<int>> threeSum(vector<int>& nums) {
+        vector<vector<int>> answer;
+        
+        sort(nums.begin(), nums.end());
+        
+        for(int i=0;i<nums.size() && nums[i]<=0;i++) {
+            if(i==0 || nums[i]!=nums[i-1]) {
+                twoSum(nums, answer, i+1, -nums[i]);
+            }
+        }
+        return answer;
+    }
+    
+    void twoSum(vector<int>& nums, vector<vector<int>> &answer, int s, int target) {
+        int p1 = s;
+        int p2 = nums.size()-1;
+        
+        while(p1<p2) {
+            int sum = nums[p1] + nums[p2];
+            
+            if(sum<target) {
+                p1 += 1;
+            } else if(sum>target) {
+                p2 -= 1;
+            } else {
+                answer.push_back({-target, nums[p1], nums[p2]});
+                p1 += 1;
+                while(p1<p2 && nums[p1]==nums[p1-1]) {
+                    p1 += 1;
+                }
+            }
+        }
+    }
+};
