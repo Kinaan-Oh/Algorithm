@@ -55,3 +55,32 @@ public:
         return maxHeap.size()==minHeap.size() ? (maxHeap.top()+minHeap.top())/(double)2 : minHeap.top();
     }
 };
+
+
+// 2022/04/04 ReDo
+
+class MedianFinder {
+private:
+    priority_queue<int> maxHeap; // sz: n or n+1
+    priority_queue<int, vector<int>, greater<int>>  minHeap; // sz: n
+    
+public:
+    MedianFinder() {
+    }
+    
+    void addNum(int num) {
+        minHeap.push(num);
+        maxHeap.push(minHeap.top());
+        minHeap.pop();
+        
+        if(maxHeap.size()==minHeap.size()+2) {
+            minHeap.push(maxHeap.top());
+            maxHeap.pop();
+        }
+    }
+    
+    double findMedian() {
+        if(maxHeap.size()>minHeap.size())   return maxHeap.top();
+        return (maxHeap.top() + minHeap.top()) * 0.5;
+    }
+};
