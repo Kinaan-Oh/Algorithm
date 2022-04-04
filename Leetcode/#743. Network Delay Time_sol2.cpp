@@ -44,7 +44,7 @@ public:
 };
 
 
-// 2022/04/04 ReDo: if(distance[cur]<=sum)  return; 문을 통해 cycle 무한방문 방지.
+// 2022/04/04 ReDo: if(distance[cur]<=sum)  return; 문을 통해 cycle 무한방문 방지. Time Complexity: O((V-1)! + ElgE)
 
 class Solution {
 private:
