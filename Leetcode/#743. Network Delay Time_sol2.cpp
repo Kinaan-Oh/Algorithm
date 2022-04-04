@@ -42,3 +42,45 @@ public:
         }
     }
 };
+
+
+// 2022/04/04 ReDo: if(distance[cur]<=sum)  return; 문을 통해 cycle 무한방문 방지.
+
+class Solution {
+private:
+    unordered_map<int, vector<pair<int,int>>>   adjList; // node: (neighbor, val)
+    unordered_map<int, int>   distance;
+public:
+    int networkDelayTime(vector<vector<int>>& times, int n, int k) {
+        int answer = INT_MIN;
+        
+        for(auto time: times) {
+            adjList[time[0]].push_back({time[1], time[2]});
+        }
+        
+        auto compare = [](pair<int,int> &a, pair<int,int> &b) {
+            return a.second<b.second;
+        };
+        for(int i=1;i<=n;i++) {
+            distance[i] = INT_MAX;
+            sort(adjList[i].begin(), adjList[i].end(), compare);
+        }
+        
+        dfs(k, 0);
+        
+        for(int i=1;i<=n;i++) {
+            if(distance[i]==INT_MAX)  return -1;
+            answer = max(answer, distance[i]);
+        }
+        return answer;
+    }
+    
+    void dfs(int cur, int sum) {
+        if(distance[cur]<=sum)  return;
+        distance[cur] = sum;
+        
+        for(auto edge: adjList[cur]) {
+            dfs(edge.first, sum+edge.second);
+        }
+    }
+};
