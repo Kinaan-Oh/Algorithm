@@ -55,3 +55,55 @@ public:
         return dist_max;
     }
 };
+
+
+
+// 2022/04/04 ReDo
+
+class Solution {
+private: 
+    unordered_map<int, vector<pair<int,int>>>   adjList;        
+    unordered_map<int, int>   distance;
+public:
+    int networkDelayTime(vector<vector<int>>& times, int n, int k) {
+        int answer = INT_MIN;
+        
+        for(auto time: times) {
+            adjList[time[0]].push_back({time[1], time[2]}); // node: (neighbor, weight)
+        }
+        for(int i=1;i<=n;i++) {
+            distance[i] = INT_MAX;
+        }
+        
+        dijkstra(n, k);
+        
+        for(int i=1;i<=n;i++) {
+            if(distance[i] == INT_MAX)  return -1;
+            answer = max(answer, distance[i]);
+        }
+        return answer;
+    }
+    
+    void dijkstra(int n, int k) {
+        auto compare = [](pair<int,int> &a, pair<int,int> &b) {
+            return a.second>b.second;
+        };
+        priority_queue<pair<int,int>, vector<pair<int,int>>, decltype(compare)>   minHeap(compare); // (node, distance)
+        
+        distance[k] = 0;
+        minHeap.push({k, 0});
+        
+        while(!minHeap.empty()) {
+            pair<int,int>   cur = minHeap.top();
+            minHeap.pop();
+            if(distance[cur.first]<cur.second)  continue;
+            
+            for(auto edge: adjList[cur.first]) {
+                if(distance[cur.first]+edge.second<distance[edge.first]) {
+                    distance[edge.first] = distance[cur.first]+edge.second;
+                    minHeap.push({edge.first, distance[edge.first]});
+                }
+            }
+        }
+    }
+};
