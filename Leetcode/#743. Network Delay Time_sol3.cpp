@@ -41,3 +41,34 @@ public:
         return dist_max;
     }
 };
+
+// 2022/04/05 edge weight>=0이기 때문에 negative cycle check 필요없음.
+
+class Solution {
+private:
+    unordered_map<int,int>  distance;
+public:
+    int networkDelayTime(vector<vector<int>>& times, int n, int k) {
+        int answer = INT_MIN;
+        
+        for(int i=1;i<=n;i++) {
+            distance[i] = INT_MAX;
+        }
+        
+        distance[k] = 0;
+        
+        for(int i=0;i<n;i++) {
+            for(auto edge: times) {
+                if(distance[edge[0]]!=INT_MAX && distance[edge[0]]+edge[2] < distance[edge[1]]) {
+                    distance[edge[1]] = distance[edge[0]]+edge[2];
+                }
+            }
+        }
+        
+        for(int i=1;i<=n;i++) {
+            if(distance[i]==INT_MAX)    return -1;
+            answer = max(answer, distance[i]);
+        }
+        return answer;
+    }
+};
