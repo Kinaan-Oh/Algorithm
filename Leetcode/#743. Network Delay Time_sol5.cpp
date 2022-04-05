@@ -36,3 +36,37 @@ public:
         return dist_max;
     }
 };
+
+// 2022/040/05 ReDo
+
+class Solution {
+public:
+    int networkDelayTime(vector<vector<int>>& times, int n, int k) {
+        int answer = INT_MIN;
+        int distance[101][101];
+        
+        fill(&distance[0][0], &distance[100][100]+1, INT_MAX);
+        
+        for(auto edge: times) {
+            distance[edge[0]][edge[1]] = edge[2];
+        }
+        for(int i=1;i<=n;i++)   distance[i][i] = 0;   
+        
+        for(int k=1;k<=n;k++) {
+            for(int i=1;i<=n;i++) {
+                for(int j=1;j<=n;j++) {
+                    if(distance[i][k]!=INT_MAX && distance[k][j]!=INT_MAX &&
+                       distance[i][k]+distance[k][j] < distance[i][j]) {
+                        distance[i][j] = distance[i][k]+distance[k][j];
+                    }
+                }
+            }
+        }
+        
+        for(int i=1;i<=n;i++) {
+            if(distance[k][i]==INT_MAX)    return -1;
+            answer = max(answer,distance[k][i]);
+        }
+        return answer;
+    }
+};
