@@ -84,3 +84,38 @@ public:
         return (maxHeap.top() + minHeap.top()) * 0.5;
     }
 };
+
+// 04/11 ReDo: num을 maxheap의 top과 비교하는 좀 더 직관적 풀이. 복잡도 동일.
+
+class MedianFinder {
+private:
+    priority_queue<int> maxHeap; // sz: n or n+1
+    priority_queue<int, vector<int>, greater<int>>  minHeap; // sz: n
+    
+public:
+    MedianFinder() {
+    }
+    
+    void addNum(int num) {
+        if(maxHeap.empty() || num<=maxHeap.top())  {
+            maxHeap.push(num);
+            
+            if(maxHeap.size()==minHeap.size()+2) {
+                minHeap.push(maxHeap.top());
+                maxHeap.pop();
+            }
+        } else {
+            minHeap.push(num);
+            
+            if(minHeap.size()==maxHeap.size()+1) {
+                maxHeap.push(minHeap.top());
+                minHeap.pop();
+            }
+        }
+    }
+    
+    double findMedian() {
+        if(maxHeap.size()>minHeap.size())   return maxHeap.top();
+        return (maxHeap.top() + minHeap.top()) * 0.5;
+    }
+};
