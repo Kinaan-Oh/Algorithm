@@ -1,4 +1,5 @@
 // Hash Table, Time Comlexity: O(mn), Space Complexity: O(m+n) (m: matrix.size, n: matrix[0].size)
+// 이외 marking으로 Space Complexity O(1) 방법이 있지만 가독성이 떨어지는 풀이법.
 
 class Solution {
 public:
