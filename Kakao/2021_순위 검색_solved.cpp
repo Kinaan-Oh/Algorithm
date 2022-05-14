@@ -1,6 +1,6 @@
-// String/Combination(Bitwise)/BinarySearch(LowerBound), Time Complexity: O((L+M)lgL), Space Complexity: O(L) (L: sum of length of info, M: sum of length of queries)
+// String/Combination(Bitwise)/BinarySearch(LowerBound), Time Complexity: O((MlgL), Space Complexity: O(L) (L: sum of length of info, M: sum of length of queries)
 // 기존풀이의 문제점: multiset이 제공하는 lower_bound return type은 bidirectional iterator로 distance는 random access iterator에 대해서만 O(1), 이외
-// iterator에 대해서는 O(n). 따라서, lgL로 탐색했지만 distance는 O(L)으로 효율성 초과. STL의 multiset을 사용할 수 없는 결정적 이유.
+// iterator에 대해서는 O(n). 따라서, lgL로 탐색했지만 distance는 O(L). 따라서, Total Time Complexity O(ML)로 효율성 초과. STL의 multiset을 사용할 수 없는 결정적 이유.
 // 따라서, random access iterator를 제공하는 vector 자료구조 선택. Sort and Lower Bound. 마지막 vector는 random access iterator를 제공하므로 distance는 O(1)로 통과 가능.
 
 #include <string>
